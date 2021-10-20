@@ -9,15 +9,15 @@ windows 下客户端环境准备
 1. 配置好java 环境，要求jdk1.8及以上版本
 2. 将hadoop 压缩包，配置HADOOP_HOME环境变量
 
-![a123569c1645aa8f9ee2fadc8263a200.png](evernotecid://C3A6FC58-7944-4D08-A565-9CB56987F3D5/appyinxiangcom/2253078/ENResource/p1552)
+![a123569c1645aa8f9ee2fadc8263a200.png](./pic/env.png)
 
 3. 配置Path环境变量。如果环境变量不起作用，可以重启电脑试试。
 
-![eb192d14658a295ed07a2c029cfe96bf.png](evernotecid://C3A6FC58-7944-4D08-A565-9CB56987F3D5/appyinxiangcom/2253078/ENResource/p1553)
+![eb192d14658a295ed07a2c029cfe96bf.png](./pic/path.png)
 
 验证Hadoop环境变量是否正常。双击winutils.exe，如果报如下错误。说明缺少微软运行库（正版系统往往有这个问题）。再资料包里面有对应的微软运行库安装包双击安装即可。
 
-![d18a977ed9e0f766f705983b3106e988.png](evernotecid://C3A6FC58-7944-4D08-A565-9CB56987F3D5/appyinxiangcom/2253078/ENResource/p1554)
+![d18a977ed9e0f766f705983b3106e988.png](./pic/err.png)
 
 
 ### idea 工程准备
@@ -82,7 +82,3 @@ public class HdfsClient {
 注意：
 
 客户端去操作HDFS时，是有一个用户身份的。默认情况下，HDFS客户端API会从采用Windows默认用户访问HDFS，会报权限异常错误。所以在访问HDFS时，一定要配置用户。
-
-```txt
-org.apache.hadoop.security.AccessControlException: Permission denied: user=56576, access=WRITE, inode="/xiyou/huaguoshan":atguigu:supergroup:drwxr-xr-x
-```
